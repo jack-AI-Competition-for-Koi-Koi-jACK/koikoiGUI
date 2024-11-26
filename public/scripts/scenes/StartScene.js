@@ -13,8 +13,8 @@ export class StartScene extends Phaser.Scene {
         // This method is called by the Scene Manager, after init() and before create(), only if the Scene has a LoaderPlugin.
         // After this method completes, if the LoaderPlugin's queue isn't empty, the LoaderPlugin will start automatically
 
-        this.load.image("backimage", "./images/background.png");
-        this.load.image("title", "./images/title4.jpg");
+        this.load.image("backimage", "./images/newback.jpg");
+        this.load.image("title", "./images/newtitle.jpg");
     }
 
     create() {
@@ -38,11 +38,12 @@ export class StartScene extends Phaser.Scene {
             .setInteractive();
 
         const change = this.add
-            .text(660, 370, "▸GAME START")
-            .setFontSize(30)
-            .setFontFamily("Verdana")
+            .text(700, 390, "▸GAME START")
+            .setFontSize(27)
+            .setFontFamily("HG正楷書体PRO")
             .setOrigin(0.5)
-            .setInteractive();
+            .setInteractive()
+            .setTint(0x000000);   
 
         change.on(
             "pointerdown",
